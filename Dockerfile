@@ -20,5 +20,5 @@ RUN ./mvnw clean package -DskipTests
 # Expose port Spring Boot runs on
 EXPOSE 8080
 
-# Default command to run the jar
-CMD ["java", "-jar", "target/MultiLoginSeleniumSpringboot-0.0.1-SNAPSHOT.jar"]
+# Default command to run the jar (wildcard to match any version)
+CMD ["sh", "-c", "java -jar target/*.jar"]
