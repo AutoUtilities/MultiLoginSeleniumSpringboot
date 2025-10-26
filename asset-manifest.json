@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MultiLoginSeleniumSpringboot/static/css/main.e6c13ad2.css",
+    "main.js": "/MultiLoginSeleniumSpringboot/static/js/main.5c5a3d6b.js",
+    "static/js/453.d7446e4a.chunk.js": "/MultiLoginSeleniumSpringboot/static/js/453.d7446e4a.chunk.js",
+    "index.html": "/MultiLoginSeleniumSpringboot/index.html",
+    "main.e6c13ad2.css.map": "/MultiLoginSeleniumSpringboot/static/css/main.e6c13ad2.css.map",
+    "main.5c5a3d6b.js.map": "/MultiLoginSeleniumSpringboot/static/js/main.5c5a3d6b.js.map",
+    "453.d7446e4a.chunk.js.map": "/MultiLoginSeleniumSpringboot/static/js/453.d7446e4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.5c5a3d6b.js"
+  ]
+}
