@@ -6,10 +6,10 @@ import lombok.Data;
 
 @Data
 public class Account {
-    @JsonProperty("username")
-    private String username;
+    @JsonProperty("Username")
+    private String Username;
 
-    @JsonProperty("password")
-    private String password;
+    @JsonProperty("Password")
+    private String Password;
 }
 

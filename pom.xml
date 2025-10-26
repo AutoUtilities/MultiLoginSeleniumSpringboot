@@ -13,8 +13,8 @@
     <relativePath/>
   </parent>
 
-  <groupId>com.sample</groupId>
-  <artifactId>sample</artifactId>
+  <groupId>com.multiLoginSpringBootSelenium</groupId>
+  <artifactId>MultiLoginSpringBootSelenium</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Sample</name>
   <description>Spring Boot + Selenium project</description>
