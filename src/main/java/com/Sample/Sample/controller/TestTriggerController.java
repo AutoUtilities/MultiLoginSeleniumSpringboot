@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import com.Sample.Sample.dao.TestDao;
 import com.Sample.Sample.dto.Account;
 
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://autoutilities.github.io")
 @RestController
 @RequestMapping("/api/test")
 public class TestTriggerController {
