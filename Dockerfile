@@ -1,6 +1,14 @@
 # Use official Java 17 JDK as base
 FROM openjdk:17-jdk-slim
 
+# Install dependencies for Chrome/Chromium and Selenium
+RUN apt-get update && apt-get install -y \
+    wget \
+    unzip \
+    chromium \
+    chromium-driver \
+    && rm -rf /var/lib/apt/lists/*
+
 # Set working directory
 WORKDIR /app
 
@@ -8,7 +16,7 @@ WORKDIR /app
 COPY mvnw pom.xml ./
 COPY .mvn .mvn
 
-# Download dependencies (offline to speed up builds)
+# Download dependencies offline to speed up builds
 RUN chmod +x mvnw && ./mvnw dependency:go-offline -B
 
 # Copy the rest of the backend source code
@@ -20,5 +28,5 @@ RUN ./mvnw clean package -DskipTests
 # Expose port Spring Boot runs on
 EXPOSE 8080
 
-# Default command to run the jar (wildcard to match any version)
+# Run the Spring Boot JAR (wildcard to match any version)
 CMD ["sh", "-c", "java -jar target/*.jar"]

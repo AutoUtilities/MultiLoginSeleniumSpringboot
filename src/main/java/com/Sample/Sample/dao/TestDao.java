@@ -21,6 +21,7 @@ public class TestDao {
     	options.addArguments("--headless");          // run without GUI
     	options.addArguments("--no-sandbox");        // required in Linux container
     	options.addArguments("--disable-dev-shm-usage"); // fix limited /dev/shm size
+    	options.setBinary("/usr/bin/chromium");
     	WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         try {
@@ -45,6 +46,7 @@ public class TestDao {
     	options.addArguments("--headless");          // run without GUI
     	options.addArguments("--no-sandbox");        // required in Linux container
     	options.addArguments("--disable-dev-shm-usage"); // fix limited /dev/shm size
+    	options.setBinary("/usr/bin/chromium");
     	WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         try {
