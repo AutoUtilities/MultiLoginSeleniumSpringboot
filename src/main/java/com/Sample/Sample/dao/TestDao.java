@@ -9,6 +9,7 @@ import java.time.Duration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -16,7 +17,11 @@ public class TestDao {
 
     public void runFacebookTest(Account account) {
     	WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("--headless");          // run without GUI
+    	options.addArguments("--no-sandbox");        // required in Linux container
+    	options.addArguments("--disable-dev-shm-usage"); // fix limited /dev/shm size
+    	WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         try {
             driver.get("https://www.facebook.com/");
@@ -36,7 +41,11 @@ public class TestDao {
 
     public void runInstagramTest(Account account) {
     	WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+    	ChromeOptions options = new ChromeOptions();
+    	options.addArguments("--headless");          // run without GUI
+    	options.addArguments("--no-sandbox");        // required in Linux container
+    	options.addArguments("--disable-dev-shm-usage"); // fix limited /dev/shm size
+    	WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         try {
             driver.get("https://www.instagram.com/");
