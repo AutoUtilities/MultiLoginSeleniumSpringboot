@@ -3,6 +3,6 @@ services:
     name: springboot-app
     env: docker
     plan: free
-    repo: https://github.com/AutoUtilities/MultiLoginSeleniumSpringboot
+    repo: https://autoutilities.github.io/MultiLoginSeleniumSpringboot
     branch: main
     autoDeploy: true
