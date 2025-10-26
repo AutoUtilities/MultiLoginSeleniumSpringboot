@@ -12,7 +12,7 @@ function TestRunner() {
       return;
     }
 
-    const url = `http://localhost:8080/api/test/${platform}`;
+    const url = `https://multiloginseleniumspringboot1.onrender.com/api/test/${platform}`;
 
     const payload = {
       Username: username,
